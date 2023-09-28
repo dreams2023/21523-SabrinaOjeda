@@ -1,26 +1,25 @@
 const { Sequelize, DataTypes } = require('sequelize');
 
 // Instancia de conexión a la base de datos
-const sequelize = new Sequelize('database', 'root', '', {
+const sequelize = new Sequelize('pruebadb', 'root', '', {
     host: 'localhost',
-    dialect: 'mysql',
-    port: 3000
-
+    dialect: 'mysql'
 });
 
+const conectarDB = async () => {
+    try {
+        await sequelize.authenticate();
+        console.log('Conexion a BD exitosa.');
+      } catch (error) {
+        console.error('Error:', error);
+      }
+}
 
-sequelize
-  .authenticate()
-  .then(() => {
-    console.log('Conexión a la base de datos exitosa');
-  })
-  .catch((err) => {
-    console.error('Error al conectar a la base de datos:', err);
-  });
 
-
+// sequelize.sync()
 
 module.exports = {
+    conectarDB,
     sequelize,
     Sequelize,
     DataTypes

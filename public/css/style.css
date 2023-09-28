@@ -1,0 +1,46 @@
+
+
+
+
+.mi-clase-col {
+    background-color: #f0f0f0; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+
+.mi-clase-h1 {
+    font-family: Arial, sans-serif; 
+    font-size: 32px;
+    color: #333; 
+}
+
+
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #fff;
+    background-color:rgb(196, 140, 35);; 
+    
+}
+
+
+
+.contenido {
+    min-height: calc(100vh - 60px); 
+    padding-bottom: 60px; 
+    
+}
+
+/* Estilo para el footer */
+footer {
+    position: fixed;
+    bottom: 0; 
+    width: 100%; 
+    background-color: rgb(196, 140, 35);
+    padding: 15px 0;
+    color: #fff; 
+}
+
+

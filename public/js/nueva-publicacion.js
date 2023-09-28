@@ -12,7 +12,8 @@ formGuardar.addEventListener('submit', async (e) => {
     const fecha = document.querySelector('#fecha').value;
 
     // Enviar al servidor
-    const response = await fetch('/publicacion', {
+    // Enviar al servidor
+    const response = await fetch('/api/publicacion', {
         method: 'post',
         headers: {
             'Content-Type':'application/json'
@@ -22,6 +23,6 @@ formGuardar.addEventListener('submit', async (e) => {
     const data = await response.json();
 
     alert(data.msg);
-    location.href = "/"
+    location.href = "/admin/publicaciones"
 
 })

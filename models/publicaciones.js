@@ -7,11 +7,11 @@ const PublicacionSchema = sequelize.define('Publicaciones', {
     autoIncrement: true,
   },
   titulo: {
-    type: DataTypes.STRING,
+    type: DataTypes.STRING(255),
     allowNull: false
   },
   descripcion: {
-    type: DataTypes.STRING,
+    type: DataTypes.STRING(255),
     allowNull: false
   },
   fecha: {
@@ -19,7 +19,7 @@ const PublicacionSchema = sequelize.define('Publicaciones', {
     allowNull: false,
   },
   url_imagen: {
-    type: DataTypes.STRING,
+    type: DataTypes.STRING(255),
     allowNull: false,
   }
 },{
